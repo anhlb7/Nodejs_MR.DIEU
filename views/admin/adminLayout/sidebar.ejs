@@ -1,0 +1,38 @@
+<div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/category">
+          <i class="fas fa-list"></i>
+          <span>Chuyên mục</span></a>
+        <ul>
+            <%category.forEach(function(rows){%>
+              <li class="nav-item">
+                  <a class="nav-link" href="/admin/category/<%=rows.id%>">
+                  <span><%= rows.name%></span></a>
+                  </li>
+            <%});%>
+        </ul> 
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/admin/tag">
+          <i class="fas fa-tag"></i>
+          <span>Thẻ Tag</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/posts">
+          <i class="fas fa-newspaper"></i>
+          <span>Bài viết</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/userlist">
+          <i class="fas fa-users"></i>
+          <span>Tài khoản</span></a>
+      </li>
+    </ul>
